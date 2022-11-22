@@ -1,3 +1,0 @@
-#!/bin/sh
-
-terminal-notifier -message "${1}" -title "${2}" -appIcon "${3}"

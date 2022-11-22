@@ -1,7 +1,0 @@
-{
-
- ;; Databases
-
- :amelinium.db/main-migrator.props {:username "amigrator"
-                                    :password "!AmeliniumMigrator!"}
- }

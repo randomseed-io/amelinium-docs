@@ -1,5 +1,0 @@
-#!/bin/sh
-
-echo "[amelinium] Building docs, please wait..."
-
-clojure -M:docs "${1}"
