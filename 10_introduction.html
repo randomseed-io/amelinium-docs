@@ -6,55 +6,55 @@
 <p><strong>Important features</strong></p>
 <ul>
 <li>
-<p>Configurable with <strong>EDN files</strong> loaded from specified directories.</p>
+<p>Configurable with <strong><a href="https://github.com/randomseed-io/amelinium/tree/main/resources/config/amelinium">EDN files</a></strong> loaded from specified directories.</p>
 </li>
 <li>
-<p><strong>JSP model-2 architecture</strong> with <strong>models</strong>, <strong>controllers</strong>, <strong>views</strong> and <strong>layouts</strong>.</p>
+<p><strong><a href="https://en.wikipedia.org/wiki/JSP_model_2_architecture">JSP model-2</a> architecture</strong> with <strong>models</strong>, <strong>controllers</strong>, <strong>views</strong> and <strong>layouts</strong>.</p>
 </li>
 <li>
-<p><a href="https://randomseed.io/software/amelinium/amelinium.app">System management</a> functions, including <strong>inspection</strong> of its current state, <strong>starting/stopping</strong> and <strong>suspending</strong>.</p>
+<p><a href="https://randomseed.io/software/amelinium/amelinium.app">System management</a> functions, including <strong>inspection</strong> of current state, <strong>starting/stopping</strong> and <strong>suspending</strong>.</p>
 </li>
 <li>
-<p>Database <strong>connection pooling</strong>.</p>
+<p>Database <strong><a href="https://github.com/randomseed-io/amelinium/blob/main/resources/config/amelinium/config.edn#L29">connection pooling</a></strong> and <strong><a href="https://github.com/randomseed-io/amelinium/tree/main/resources/migrations/amelinium">migrations</a></strong>.</p>
 </li>
 <li>
-<p><strong>Abstract caches</strong> around certain database operations (including incremental updates of collections) and time consuming functions, with adjustable TTL and queue size parameters.</p>
+<p><strong>Abstract caches</strong> around certain <a href="https://github.com/randomseed-io/amelinium/blob/main/resources/config/amelinium/config.edn#L49">database operations</a> (including incremental updates of collections) and time consuming functions, with adjustable TTL and queue size parameters.</p>
 </li>
 <li>
-<p><strong>Internationalization</strong> (i18n) with or without default messages and <strong>pluralization rules</strong> for translations of countable items in different languages.</p>
+<p><strong>Internationalization</strong> (i18n) based on <a href="https://github.com/randomseed-io/amelinium/blob/main/resources/translations/amelinium/en.edn">maps</a> with or without missing key messages and <strong><a href="https://github.com/randomseed-io/amelinium/blob/main/src/amelinium/i18n/pluralizers.clj">pluralization rules</a></strong> for translations of countable items in different languages.</p>
 </li>
 <li>
-<p><strong>Session handling</strong> with configurable persistent storage accessors, polymorphic interface, secure tokens and prolongation support.</p>
+<p><strong><a href="https://github.com/randomseed-io/amelinium/blob/main/resources/config/amelinium/config.edn#L82">Session handling</a></strong> with configurable persistent storage accessors, polymorphic interface, secure tokens and prolongation support.</p>
 </li>
 <li>
 <p><strong>Cookie-less</strong> session handling.</p>
 </li>
 <li>
-<p><strong>Role-based access control</strong> middleware with optional context detection.</p>
+<p><strong><a href="https://github.com/randomseed-io/amelinium/blob/main/resources/config/amelinium/config.edn#L96">Role-based access control</a></strong> middleware with optional context detection.</p>
 </li>
 <li>
-<p><strong>HTTP headers manipulation</strong> middleware.</p>
+<p><strong><a href="https://github.com/randomseed-io/amelinium/blob/main/resources/config/amelinium/config.edn#L78">HTTP headers manipulation</a></strong> middleware.</p>
 </li>
 <li>
-<p><strong>Language detection</strong> middleware with configurable detection chains.</p>
+<p><strong><a href="https://github.com/randomseed-io/amelinium/blob/main/resources/config/amelinium/config.edn#L143">Language detection</a></strong> middleware with configurable <a href="https://github.com/randomseed-io/amelinium/blob/main/resources/config/amelinium/config.edn#L124">detection chains</a>.</p>
 </li>
 <li>
-<p><strong>Generic populating functions</strong> to enrich request map with dynamic data.</p>
+<p><strong>Generic <a href="https://github.com/randomseed-io/amelinium/blob/main/resources/config/amelinium/config.edn#L210">populating functions</a></strong> to enrich request map with dynamic data.</p>
 </li>
 <li>
-<p><strong>Remote IP</strong> middleware with proxy detection and proxy IP whitelisting.</p>
+<p><strong><a href="https://github.com/randomseed-io/amelinium/blob/main/resources/config/amelinium/config.edn#L72">Remote IP</a></strong> middleware with proxy detection and proxy IP <a href="https://github.com/randomseed-io/amelinium/blob/main/resources/config/amelinium/config-ip.edn">whitelisting</a>.</p>
 </li>
 <li>
 <p><strong>Lazy maps</strong> to pass request data between middleware handlers and contextual data to template rendering functions.</p>
 </li>
 <li>
-<p><strong>URI</strong> builders for <strong>localized paths</strong> with automatic detection and/or injection of language parameter (route-name based or path based).</p>
+<p><strong>URI</strong> builders for <strong><a href="https://randomseed.io/software/amelinium/amelinium.common#var-localized-page">localized paths</a></strong> with automatic detection and/or injection of language parameter (route-name based or path based).</p>
 </li>
 <li>
-<p><strong>URI</strong> builders for other <strong>parameterized paths</strong>.</p>
+<p><strong>URI</strong> builders for other <strong><a href="https://randomseed.io/software/amelinium/amelinium.common#var-parameterized-page">parameterized paths</a></strong>.</p>
 </li>
 <li>
-<p><strong>Parameter coercion</strong> and <strong>error reporting</strong> for both API and web channels.</p>
+<p><strong>Parameter <a href="https://github.com/randomseed-io/amelinium/blob/main/resources/config/amelinium/config.edn#L153">coercion</a></strong> and <strong>error handling</strong> for both <a href="https://randomseed.io/software/amelinium/amelinium.api.controller#var-handle-coercion-error">API</a> and <a href="https://randomseed.io/software/amelinium/amelinium.web.controller#var-handle-coercion-error">web</a> channels.</p>
 </li>
 <li>
 <p><strong>Twilio API</strong> client (for SMS and e-mail messaging, including internationalized templates).</p>
@@ -66,7 +66,7 @@
 <p><strong>Web rendering</strong> handlers and predefined template tags for translations, language-parameterized path generation, session links (for cookie-less sessions), form building and session data access.</p>
 </li>
 <li>
-<p><strong>Flexible authentication engine</strong> with pluggable encryption modules and ability to build parameterized encryption chains stored in a database (and re-used where possible).</p>
+<p><strong>Flexible authentication engine</strong> with pluggable <a href="https://randomseed.io/software/amelinium/amelinium.auth.algo.scrypt">encryption modules</a> and ability to build parameterized <a href="https://github.com/randomseed-io/amelinium/blob/main/resources/config/amelinium/config.edn#L341">password encryption chains</a> stored in a database (and re-used where possible).</p>
 </li>
 <li>
 <p><strong>Authentication functions</strong> for API and web, ready to be used in controllers.</p>
