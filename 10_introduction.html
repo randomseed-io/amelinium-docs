@@ -72,7 +72,7 @@
 <p><strong>Web rendering</strong> handlers and predefined template tags for translations, language-parameterized path generation, session links (for cookie-less sessions), form building and session data access.</p>
 </li>
 <li>
-<p>API and web <strong>response handlers</strong> (based on <code>:response/status</code> or <code>:response/fn</code>, <code>:response/headers</code> or <code>:response/body</code>).</p>
+<p>API and web <strong>response handlers</strong> (controlled by <code>:response/status</code> or <code>:response/fn</code>, <code>:response/headers</code> and <code>:response/body</code> request map entries).</p>
 </li>
 <li>
 <p><strong>Flexible authentication engine</strong> with pluggable <a href="https://randomseed.io/software/amelinium/amelinium.auth.algo.scrypt">encryption modules</a> and ability to build parameterized <a href="https://github.com/randomseed-io/amelinium/blob/main/resources/config/amelinium/config.edn#L341">password encryption chains</a> stored in a database (and re-used where possible).</p>
@@ -90,6 +90,9 @@
 <p><strong>Swagger</strong> support for API and web.</p>
 </li>
 </ul>
+<h2><a href="#simplified-request-processing-workflow" id="simplified-request-processing-workflow"></a>Simplified request processing workflow</h2>
+<p>Below is simplified request processing workflow for a web channel. Its purpose it to shed some light on the overall architecture.</p>
+<p><img src="docs/img/amelinium-workflow-web.svg" alt="Web request processing in Amelinium" /></p>
 <h2><a href="#tech-stack" id="tech-stack"></a>Tech stack</h2>
 <p>Amelinium is based on the following Clojure and Java libraries:</p>
 <ul>
@@ -159,7 +162,7 @@
 <li><a href="https://github.com/dakrone/cheshire">Cheshire</a> for JSON handling</li>
 <li><a href="https://github.com/clojurewerkz/balagan">Balagan</a> for nested structures matching</li>
 <li><a href="https://github.com/clj-commons/camel-snake-kebab">camel-snake-kebab</a> for word case conversions</li>
-<li><a href="https://github.com/danlentz/clj-uuid">clj-uuid</a> for RFC4122 Unique Identifiers</li>
+<li><a href="https://github.com/danlentz/clj-uuid">clj-uuid</a> for RFC4122 unique identifiers</li>
 <li><a href="https://github.com/randomseed-io/smangler">smangler</a> for string truncation</li>
 <li><a href="https://github.com/randomseed-io/bankster">Bankster</a> for money and currency handling</li>
 <li><a href="https://github.com/randomseed-io/phone-number">phone-number</a> for phone numbers handling</li>
@@ -174,7 +177,7 @@
 <li><a href="https://github.com/weavejester/ragtime">Ragtime</a> for database migrations</li>
 <li><a href="https://github.com/ptaoussanis/nippy">Nippy</a> for fast serialization</li>
 <li><a href="https://github.com/clojure/core.cache">core.cache</a> and <a href="https://github.com/clojure/core.memoize">core.memoize</a> for function memoization</li>
-<li><a href="https://github.com/randomseed-io/utils">random:utils</a> for persistent property caching</li>
+<li><a href="https://github.com/randomseed-io/utils">random:utils</a> for property caching</li>
 </ul>
 </li>
 <li>
